@@ -1,7 +1,8 @@
 let padding = 10;
+let desiredTileSize = 30;
 let canvasHeight = window.innerHeight / 1.5;
 let canvasWidth = window.innerWidth - padding * 2;
-let gridRows = 33;
+let gridRows = Math.round(canvasWidth / desiredTileSize);
 let gridRowWidth = canvasWidth / gridRows;
 let gridCols = Math.floor(canvasHeight / gridRowWidth);
 let gridColWidth = canvasHeight / gridCols;
