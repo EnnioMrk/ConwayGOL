@@ -17,11 +17,15 @@ class gameManager {
     }
     draw() {
         this.cv.clear();
-        this.cv.grid(this.gridRows, this.gridCols, "grey");
+        this.cv.grid(this.gridRows, this.gridCols, 'grey');
         for (let i = 0; i < this.gridRows; i++) {
             for (let j = 0; j < this.gridCols; j++) {
                 if (this.objects[i][j].l) {
-                    this.cv.cell(i, j, "black");
+                    this.cv.cell(
+                        i,
+                        j,
+                        '#' + Math.floor(Math.random() * 16777215).toString(16)
+                    );
                 }
             }
         }
